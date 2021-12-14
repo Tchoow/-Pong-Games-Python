@@ -68,22 +68,15 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
                 joueur1.y -= joueur1.vel
+                joueur1.height -= 10
                 joueur1.draw(window)
-                pygame.display.update()
-                time.sleep(0.01)
-                joueur1.y -= joueur1.vel
-                joueur1.height -= joueur1.vel
                 print("up")
-                break
             if event.key == pygame.K_DOWN:
                 joueur1.y += joueur1.vel
+                joueur1.height += 10
                 joueur1.draw(window)
-                pygame.display.update()
-                time.sleep(0.01)
-                joueur1.y += joueur1.vel
-                joueur1.height += joueur1.vel
                 print("down")
-                break
+            pygame.display.update()
         
 
 pygame.quit()
